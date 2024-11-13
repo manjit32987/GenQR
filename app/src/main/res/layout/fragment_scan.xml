@@ -1,10 +1,20 @@
-<!-- res/layout/fragment_scan.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center">
+
+    <!-- Gallery Icon -->
+    <ImageView
+        android:id="@+id/gallery_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_gallery"
+    android:contentDescription="Gallery Icon"
+    android:clickable="true"
+    android:focusable="true"/>
 
     <!-- QR Scanner Box -->
     <com.journeyapps.barcodescanner.DecoratedBarcodeView
