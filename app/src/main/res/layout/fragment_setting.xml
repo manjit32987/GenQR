@@ -41,6 +41,14 @@
             android:text="Light Mode" />
     </RadioGroup>
 
+    <ImageView
+        android:id="@+id/githubIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_github" />
+
     <Button
         android:id="@+id/buyCoffeeButton"
         android:layout_width="wrap_content"

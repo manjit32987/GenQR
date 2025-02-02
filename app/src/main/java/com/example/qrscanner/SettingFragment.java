@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatDelegate;
@@ -22,9 +23,10 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
-        // Initialize modeRadioGroup and buyCoffeeButton after inflating the layout
+        // Initialize the modeRadioGroup, buyCoffeeButton, and GitHub icon ImageView
         RadioGroup modeRadioGroup = view.findViewById(R.id.modeRadioGroup);
         Button buyCoffeeButton = view.findViewById(R.id.buyCoffeeButton);
+        ImageView githubIcon = view.findViewById(R.id.githubIcon);
 
         // Set the theme mode based on the selected radio button
         modeRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
@@ -55,6 +57,14 @@ public class SettingFragment extends Fragment {
             // Create an intent to open the UPI payment link directly
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent); // Start the intent without any additional checks
+        });
+
+        // Set up the GitHub icon click event to open the GitHub profile/repository URL
+        githubIcon.setOnClickListener(v -> {
+            // Replace with your GitHub profile or repository URL
+            String githubUrl = "https://github.com/manjit32987";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
+            startActivity(intent); // Open the GitHub link
         });
 
         return view;  // Return the inflated view at the end

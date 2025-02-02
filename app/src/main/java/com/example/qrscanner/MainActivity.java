@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new ScanFragment();
                     } else if (item.getItemId() == R.id.nav_generate) {
                         selectedFragment = new GenerateFragment();
-                    } else if (item.getItemId() == R.id.nav_history) {
-                        selectedFragment = new HistoryFragment();
-                    }else if (item.getItemId() == R.id.nav_setting) {
+                    } else if (item.getItemId() == R.id.nav_setting) {
                         selectedFragment = new SettingFragment();
                     }
 
